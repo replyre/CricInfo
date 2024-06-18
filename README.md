@@ -101,9 +101,6 @@ The `config.js` file stores your CricAPI key. Ensure this file is updated with y
 
 We welcome contributions to improve this extension. If you have any suggestions or improvements, please feel free to submit a pull request or open an issue on the repository.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
