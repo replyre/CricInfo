@@ -107,4 +107,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Thank you for using the Cricket Live Score Chrome Extension! Enjoy staying up-to-date with all the cricket action right from your browser.
+Thank you for using the CricInfo Chrome Extension! Enjoy staying up-to-date with all the cricket action right from your browser.
+
