@@ -1,0 +1,11 @@
+{
+  "name": "CricInfo",
+  "version": "1.0.0",
+  "description": "get the latest cricket updates",
+  "manifest_version": 3,
+  "author": "Rahul Gupta",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "CricInfo"
+  }
+}
