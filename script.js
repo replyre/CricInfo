@@ -10,6 +10,12 @@ async function getmatches() {
   );
   const Data = await res.json();
   MatchData = Data;
+  console.log(Data);
+  console.log(
+    Data.data.filter((e) => {
+      return e.t1 == "" || e.t2 == "";
+    })
+  );
   filterData = Data.data;
   showMatches(Data.data);
 }
@@ -34,8 +40,8 @@ function showMatches(data) {
     match_tile.innerHTML = `<p>${match.series}</p> 
   <div class="teams">
   <div class="t1">
-  <img src="${match.t1img}">
- ${match.t1.split("[")[1] ? match.t1.split("[")[1].split("]")[0] : ""}
+  <img src="${match.t1img || "./cricket.png"}">
+ ${match.t1.split("[")[1] ? match.t1.split("[")[1].split("]")[0] : match.t1}
   <span class="score"> ${match.t1s === "" ? "--" : match.t1s}</span>
   </div>
     <div class="status">
@@ -43,8 +49,8 @@ function showMatches(data) {
     <p>${match.status}</p>
     </div>
   <div class="t2">
-  <img src="${match.t2img}">
-  ${match.t2.split("[")[1] ? match.t2.split("[")[1].split("]")[0] : ""}
+  <img src="${match.t2img || "./cricket.png"}">
+  ${match.t2.split("[")[1] ? match.t2.split("[")[1].split("]")[0] : match.t2}
   <span class="score"> ${match.t2s === "" ? "--" : match.t2s}</span>
   </div>
   </div>`;
@@ -108,7 +114,11 @@ document.querySelector(".live").addEventListener("click", (e) => {
     document.querySelector(".live").style.color = "red";
     live = true;
     const filterData = MatchData.data.filter((e) => {
-      return !e.status.includes("won") && !e.status.includes("start");
+      return (
+        !e.status.includes("won") &&
+        !e.status.includes("start") &&
+        !e.status.includes("tied")
+      );
     });
     // console.log(filterData);
     showMatches(filterData);
