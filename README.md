@@ -57,7 +57,7 @@ Before you can start using the extension, you need to have the following:
 Once the extension is installed and configured, you can start using it right away:
 
 1. **Open the extension**:
-    - Click on the Cricket Live Score icon in the Chrome toolbar.
+    - Click on the CricInfo icon in the Chrome toolbar.
 
 2. **View matches**:
     - The extension will display a list of all current live matches by default.
@@ -66,7 +66,7 @@ Once the extension is installed and configured, you can start using it right awa
     - Use the search bar to find specific matches by team name or tournament.
 
 4. **Filter matches**:
-    - Use the filter options to switch between live and completed matches.
+    - Use the filter options to switch between different matches formats. You can also switch between live and complete matches.
 
 ## File Structure
 
